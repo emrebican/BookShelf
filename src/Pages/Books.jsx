@@ -24,7 +24,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 function Books() {
     // Context
-    const { state, BY_RATING, SEARCH_QUERY, MOST_STAR, CATEGORY } = useBookContext();
+    const { state, BY_RATING, SEARCH_QUERY, MOST_STAR, CATEGORY, themeColor } = useBookContext();
     const [loading, setLoading] = useState(true);
 
     setTimeout(() => {
@@ -103,7 +103,9 @@ function Books() {
                                 />
                             ))}
                         </Masonry>
-                        : <Typography variant="h4">No books in your BookShelf</Typography>
+                        : <Typography variant="h4" style={{ color: themeColor ? "#fafafa" : "#212121", textAlign: "center" }}>
+                            your bookshelf is empty
+                        </Typography>
 
                     }
                     <IconButton
