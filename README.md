@@ -29,4 +29,4 @@ This app made with [React](https://reactjs.org/) and include technologies follow
 
 ## Author
 
-Github - [EmreBican](https://github.com/emrebican)
+Emre Bican - [Github](https://github.com/emrebican)
