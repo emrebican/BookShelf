@@ -90,18 +90,22 @@ function Books() {
                             {format(new Date(), 'do MMMM Y eeee')}
                         </StyledBadge>
                     </Typography >
-                    <Masonry
-                        breakpointCols={breakpoints}
-                        className="my-masonry-grid"
-                        columnClassName="my-masonry-grid_column"
-                    >
-                        {filteredState().map(item => (
-                            <BookCard
-                                item={item}
-                                key={item.id}
-                            />
-                        ))}
-                    </Masonry>
+                    {filteredState().length > 0 ?
+                        <Masonry
+                            breakpointCols={breakpoints}
+                            className="my-masonry-grid"
+                            columnClassName="my-masonry-grid_column"
+                        >
+                            {filteredState().map(item => (
+                                <BookCard
+                                    item={item}
+                                    key={item.id}
+                                />
+                            ))}
+                        </Masonry>
+                        : <Typography variant="h4">No books in your BookShelf</Typography>
+
+                    }
                     <IconButton
                         onClick={TOP_OF_SCREEN}
                         color="error"
