@@ -9,12 +9,12 @@ There is a graphic brief which give you some information about your list, in the
 <img src="/public/images/img-1.jpg" alt="img-1">
 
 <p float="left">
-<img src="/public/images/img-2.jpg" alt="img-2" style="height: 600px;"/>
-<img src="/public/images/img-3.jpg" alt="img-3" style="height: 600px;"/>
+<img src="/public/images/img-2.jpg" alt="img-2" style="height: 600px; width:400px;"/>
+<img src="/public/images/img-3.jpg" alt="img-3" style="height: 600px; width:400px;"/>
 </p>
 <p float="right">
-<img src="/public/images/img-4.jpg" alt="img-4" style="height: 600px;"/>
-<img src="/public/images/img-6.jpg" alt="img-6" style="height: 600px;"/>
+<img src="/public/images/img-4.jpg" alt="img-4" style="height: 600px; width:400px;"/>
+<img src="/public/images/img-6.jpg" alt="img-6" style="height: 600px; width:400px;"/>
 </p>
 <img src="/public/images/img-5.jpg" alt="img-5"/>
 
