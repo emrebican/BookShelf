@@ -1,0 +1,173 @@
+/* -------------------- MENU NAVBAR -------------------- */
+
+/* MENU COMPONENT */
+.menu-component {
+  position: relative;
+
+  .menu-btn {
+    position: absolute;
+    z-index: 100;
+    top: 2rem;
+    left: 3rem;
+    color: $light-clr;
+    background-color: $red-600;
+    box-shadow: 0px 0px 5px $dark-clr;
+    transform: scale(0.9);
+    @include transition(0.2s);
+
+    &:hover {
+      background-color: $red-600;
+      transform: scale(1);
+    }
+
+    svg {
+      font-size: 2rem;
+    }
+
+    @media (min-width: 640px) {
+      display: none;
+    }
+  }
+  .menu-btn-create {
+    top: 3rem;
+    color: $white-clr;
+    box-shadow: 0px 0px 5px $dark-clr;
+    @include transition(0.2s);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.menu-navbar {
+  background-color: $white-clr;
+  position: relative;
+  height: 100%;
+
+  .menu-close-btn {
+    position: absolute;
+    top: 1.2rem;
+    right: 0.5rem;
+    z-index: 50;
+    color: $white-clr;
+  }
+
+  .title {
+    padding: 1.2rem;
+    font-family: $ff-title;
+    font-size: 2.6rem;
+    text-align: center;
+    background-color: $red-600;
+    position: relative;
+    @include transition(0.5s);
+    cursor: pointer;
+
+    span {
+      position: absolute;
+      top: 2.15rem;
+      left: 50%;
+      width: 25%;
+      font-size: 1.1rem;
+      font-weight: bold;
+      background-color: $red-600;
+      color: $dark-clr;
+      transform: translateX(-50%);
+      @include transition(0.5s);
+    }
+    box-shadow: inset 0px 0px 5px $dark-clr;
+
+    &:hover span {
+      opacity: 0;
+      @include transition(0.5s);
+    }
+  }
+
+  .menu-items {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    color: $indigo;
+    width: 100%;
+    text-align: right;
+
+    svg {
+      font-size: 2rem;
+    }
+
+    span {
+      font-size: 1.2rem;
+      font-family: $ff-primary;
+      text-transform: uppercase;
+    }
+  }
+
+  .theme-btn {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 1.2rem;
+    @include transition(0.5s);
+
+    svg {
+      font-size: 1.8rem;
+    }
+  }
+
+  .wrapper {
+    @include flex(flex, center, center);
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 2px;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background: $dark-clr;
+    box-shadow: 0px 0px 8px $dark-clr;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      color: $white-clr;
+      transition: all ease 0.5s;
+
+      &:hover {
+        color: $red-600;
+        cursor: pointer;
+      }
+    }
+
+    &:hover svg {
+      transform: rotate(-90deg) scale(1.05);
+    }
+  }
+
+  .filter-box {
+    position: relative;
+    @include flex(flex, stretch, center);
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 2rem 3rem;
+    margin-top: 2rem;
+    border: 2px solid $indigo;
+    box-shadow: 0px 0px 4px $dark-clr;
+
+    .filter-reset-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      color: $indigo;
+      @include transition(0.4s);
+
+      &:hover {
+        color: $red-600;
+      }
+    }
+  }
+}

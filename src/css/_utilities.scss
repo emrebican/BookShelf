@@ -1,0 +1,9 @@
+@mixin flex($display, $align, $justify) {
+  display: $display;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin transition($sec) {
+  transition: all ease $sec;
+}

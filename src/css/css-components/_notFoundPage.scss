@@ -1,0 +1,19 @@
+.not-found-page {
+  @include flex(flex, center, center);
+  flex-direction: column;
+  height: 100vh;
+  font-size: 1.8rem;
+  font-family: $ff-primary;
+  color: $light-clr;
+  
+  svg {
+    color: $light-clr;
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+    @include transition(0.4s);
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

@@ -1,0 +1,53 @@
+/* -------------------- BOOK CARD -------------------- */
+.card-item {
+  position: relative;
+
+  .top-content {
+    font-weight: bold;
+    background-color: $light-indigo;
+    color: $light-clr;
+    @include transition(0.6s);
+  }
+
+  .mid-content {
+    padding: 1rem 1.3rem;
+  }
+
+  .bottom-content {
+    @include flex(flex, flex-end, space-between);
+    padding: 0 1rem;
+    padding-bottom: 0.4rem;
+    color: $gray-clr;
+  }
+  .delete-btn {
+    color: $light-clr;
+    @include transition(0.2s);
+
+    &:hover {
+      color: $red-600;
+    }
+  }
+
+  .update-btn {
+    position: absolute;
+    @include transition(0.4s);
+    opacity: 0;
+    color: $white-clr;
+    top: 0.1rem;
+    left: -0.2rem;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &:hover {
+    .top-content {
+      background-color: $indigo;
+    }
+  }
+
+  &:hover .update-btn {
+    opacity: 1;
+  }
+}
