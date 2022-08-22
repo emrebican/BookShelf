@@ -1,8 +1,7 @@
-import { format } from 'date-fns';
 import { v4 as uuidv4 } from 'uuid';
 
 // add Date to Card
-const NOTE_DAY = format(new Date(), 'do MMMM Y eee');
+const NOTE_DAY = new Date().toISOString();
 
 export const bookReducer = (state, action) => {
 
@@ -23,7 +22,7 @@ export const bookReducer = (state, action) => {
         case types.DELETE_BOOK:
             return state.filter(book => book.id !== action.payload);
 
-        case "UPDATE_BOOK":
+        case types.UPDATE_BOOK:
             return state.map(item => item.id === action.payload.id
                 ? {
                     ...item,

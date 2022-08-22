@@ -15,7 +15,8 @@ import ClearRoundedIcon from '@mui/icons-material/ClearRounded';
 import { useBookContext } from '../Context/BookContext';
 import { categoryName, upperCaseString } from "../Utilities/utilities";
 import Rating from "./Rating";
-import UpdateBoook from './UpdateBook';
+import UpdateBook from './UpdateBook';
+import TimeAgo from '../Utilities/TimeAgo';
 
 // Styles
 const styles = {
@@ -118,10 +119,10 @@ function BookCard({ item }) {
           title="Added Date"
           TransitionComponent={Zoom}
         >
-          <Typography variant="caption">{item.date}</Typography>
+          <TimeAgo timestamp={item.date} />
         </Tooltip>
       </Box>
-      <UpdateBoook item={item} />
+      <UpdateBook item={item} />
     </Card >
   )
 }
